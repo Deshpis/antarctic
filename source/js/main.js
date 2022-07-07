@@ -13,6 +13,24 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  const navMain = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.main-nav__toggle');
+
+  if (navMain) {
+    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.add('main-nav--closed');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  }
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
