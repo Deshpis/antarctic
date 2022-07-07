@@ -1,0 +1,43 @@
+.page {
+  height: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fz-default;
+  line-height: $lh-default;
+  font-family: $ff-montserrat;
+  color: $color-base-black;
+}
+
+.page__body {
+  margin: 0 auto;
+  width: $vp-1366;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: $color-base-white;
+
+  @include vp-1365 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    min-width: $vp-320;
+  }
+}
+
+.page__header {
+  min-height: 650px;
+
+  @include vp-1365 {
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    min-height: 500px;
+  }
+}
+
+.page__main {
+  flex-grow: 1;
+}
