@@ -45,10 +45,66 @@
       </div>
     </header>
     <main class="page__main">
-
+      <section class="promo">
+        <div class="promo__description">
+          <h2>Путешествие <span class="promo__nowrap">на край Земли</span></h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+        </div>
+        <figure class="promo__image">
+          <picture>
+            <source type="image/webp" srcset="img/content/promo.webp 1x, img/content/promo@2x.webp 2x">
+            <!-- 1x: 560px; 2x: 1120px -->
+            <img src="img/content/promo.jpg" srcset="img/content/promo@2x.jpg 2x" width="560" height="301" alt="Пингвины Антарктики.">
+          </picture>
+        </figure>
+      </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+      <a class="footer__logo logo" href="#" title="Логотип">
+        <svg class="logo__image" width="70" height="38">
+          <use href="img/sprite_auto.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__site-list site-list">
+        <li>
+          <a href="#benefits">Преимущества</a>
+        </li>
+        <li>
+          <a href="#directions">Направления</a>
+        </li>
+        <li>
+          <a href="#upcoming">Ближайшие круизы</a>
+        </li>
+        <li>
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
+      <ul class="footer__social social">
+        <li>
+          <a href="#" rel="noopener noreferrer" target="_blank">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg width="11" height="20">
+              <use href="img/sprite_auto.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" rel="noopener noreferrer" target="_blank">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg width="20" height="20">
+              <use href="img/sprite_auto.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" rel="noopener noreferrer" target="_blank">
+            <span class="visually-hidden">Твиттер</span>
+            <svg width="20" height="17">
+              <use href="img/sprite_auto.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </footer>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

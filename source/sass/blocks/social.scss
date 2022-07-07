@@ -1,0 +1,24 @@
+.social {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  max-width: 100px;
+  grid-template-columns: repeat(auto-fill, 20px);
+  gap: 20px;
+  list-style: none;
+}
+
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: $color-base-white;
+}
+
+.social svg {
+  width: 20px;
+  height: 20px;
+  fill: $color-base-white;
+}

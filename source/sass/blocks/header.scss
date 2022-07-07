@@ -3,30 +3,30 @@
   flex-direction: column;
   color: $color-base-white;
   background-color: $color-header-bg;
-  background-image: url("../../img/header-bg-desktop.jpg");
+  background-image: url("../img/decorative/header-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: 0 8px 8px -5px rgba($color-default-black, 0.25);
 
   @include retina {
-    background-image: url("../../img/header-bg-desktop@2x.jpg");
+    background-image: url("../img/decorative/header-bg-desktop@2x.jpg");
   }
 
   @include vp-1365 {
-    background-image: url("../../img/header-bg-tablet.jpg");
+    background-image: url("../img/decorative/header-bg-tablet.jpg");
     box-shadow: none;
 
     @include retina {
-      background-image: url("../../img/header-bg-tablet@2x.jpg");
+      background-image: url("../img/decorative/header-bg-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
-    background-image: url("../../img/header-bg-mobile.jpg");
+    background-image: url("../img/decorative/header-bg-mobile.jpg");
 
     @include retina {
-      background-image: url("../../img/header-bg-mobile@2x.jpg");
+      background-image: url("../img/decorative/header-bg-mobile@2x.jpg");
     }
   }
 }
