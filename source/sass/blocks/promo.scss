@@ -3,7 +3,7 @@
   display: flex;
 
   @include vp-1365 {
-    padding: 100px 45px;
+    padding: 93px 45px;
     padding-top: 91px;
     justify-content: center;
   }
@@ -75,7 +75,7 @@
   @include vp-1365 {
     padding-top: 9px;
     min-width: 324px;
-    height: 264px;
+    height: 273px;
   }
 
   @include vp-767 {
@@ -83,12 +83,18 @@
     min-width: 290px;
     width: 100%;
     min-height: 186px;
-    height: auto;
+    height: 100%;
     align-self: center;
   }
 }
 
 .promo img {
   margin: 0 auto;
-  object-fit: contain;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  @include vp-767 {
+    min-height: 186px;
+  }
 }

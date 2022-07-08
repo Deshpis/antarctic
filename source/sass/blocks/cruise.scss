@@ -1,0 +1,146 @@
+.cruise {
+  position: relative;
+  height: 386px;
+  overflow: hidden;
+  color: $color-base-white;
+  background-color: $color-cruise-bg;
+  cursor: pointer;
+}
+
+.cruise h3 {
+  position: absolute;
+  margin: 0;
+  max-width: 200px;
+  left: 30px;
+  bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  z-index: 1;
+  transition: all 150ms;
+
+  @include vp-1365 {
+    left: 36px;
+    bottom: 28px;
+  }
+
+  @include vp-767 {
+    left: 25px;
+    bottom: 17px;
+  }
+}
+
+.cruise:hover h3 {
+  bottom: 330px;
+  left: 25px;
+  z-index: 3;
+
+  @include vp-1365 {
+    left: 35px;
+  }
+
+  @include vp-1365 {
+    left: 25px;
+  }
+}
+
+.cruise picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.cruise img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.cruise__inner {
+  position: absolute;
+  padding: 35px 25px;
+  padding-top: 69px;
+  padding-right: 20px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: $color-base-white;
+  background-color: $color-base-black;
+  transition: all 150ms;
+  z-index: 2;
+
+  @include vp-1365 {
+    padding-left: 35px;
+  }
+
+  @include vp-767 {
+    padding-left: 25px;
+  }
+}
+
+.cruise:hover .cruise__inner {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruise__description {
+  position: relative;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.cruise__description::-webkit-scrollbar {
+  position: absolute;
+  left: 0;
+  width: 5px;
+  background-color: $color-scroll-bar;
+  border-radius: 2px;
+}
+
+.cruise__description::-webkit-scrollbar-button,
+.cruise__description::-webkit-scrollbar-track {
+  display: none;
+}
+
+.cruise__description::-webkit-scrollbar-thumb {
+  background-color: $color-scroll-thumb;
+  border-radius: 2px;
+}
+
+.cruise__description p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.cruise__description span {
+  margin-bottom: 12px;
+  display: block;
+  color: $color-cruise-font;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.cruise__inner a {
+  margin: 0;
+  display: block;
+  width: 210px;
+  font-weight: 600;
+  color: $color-base-black;
+  text-align: center;
+  background-color: $color-base-white;
+
+  @include vp-1365 {
+    width: 240px;
+  }
+
+  @include vp-767 {
+    width: 220px;
+  }
+}
