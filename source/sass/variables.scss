@@ -13,7 +13,11 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-base-black:               #011c40;
 $color-base-white:               #f9fbfd;
 $color-header-bg:                #3576c5;
-
+$color-benefits-bg:              #cfe4fb;
+$color-cruise-bg:                #4e7db7;
+$color-cruise-font:              #d8d8d9;
+$color-scroll-bar: rgba($color-base-white, 0.25);
+$color-scroll-thumb: rgba($color-base-white, 0.3);
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
