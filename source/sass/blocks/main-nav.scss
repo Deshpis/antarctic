@@ -16,9 +16,19 @@
     min-height: 69px;
     overflow-x: clip;
 
-    &--nojs .main-nav__toggle {
-      display: none;
+    &--nojs {
+      padding: 0;
     }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__site-list {
+    position: relative;
+    width: 100%;
+    min-height: auto;
   }
 
   .main-nav__toggle {
