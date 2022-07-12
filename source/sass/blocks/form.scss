@@ -1,0 +1,102 @@
+.form input {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 11px 16px;
+  padding-bottom: 14px;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.form input::placeholder {
+  font-family: $ff-montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $ff-placeholder;
+}
+
+.form p {
+  margin: 0;
+  margin-bottom: 27px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-767 {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 214px;
+    text-align: center;
+  }
+}
+
+.form__agreement {
+  position: relative;
+  margin-bottom: 34px;
+  padding-left: 23px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include vp-767 {
+    margin-bottom: 23px;
+    padding-left: 28px;
+  }
+}
+
+.form__agreement input {
+  position: absolute;
+  appearance: none;
+}
+
+.form__agreement input:focus {
+  outline: none;
+}
+
+.form__agreement input + .form__agreement-icon {
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form__agreement input:focus + .form__agreement-icon {
+  outline: 1px solid $color-base-white;
+  outline-offset: 1px;
+}
+
+.form__agreement input:checked + .form__agreement-icon {
+  background-image: url("../img/svg/checkbox-cheked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__agreement span {
+  margin: 0;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+
+  @include vp-767 {
+    margin: 0;
+    text-align: left;
+    width: 155px;
+  }
+}
+
+.form button {
+  margin: 0;
+  padding: 11px;
+  width: 100%;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}

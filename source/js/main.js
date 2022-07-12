@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.main-nav__toggle');
 
   if (navMain) {
+    navMain.classList.remove('main-nav--opened');
     navMain.classList.remove('main-nav--nojs');
     navMain.classList.add('main-nav--closed');
 

@@ -15,7 +15,7 @@
   </head>
   <body class="page__body">
     <header class="page__header header">
-      <nav class="header__navigation main-nav main-nav--nojs">
+      <nav class="header__navigation main-nav main-nav--opened main-nav--nojs">
         <a class="main-nav__logo logo" href="#" title="Логотип">
           <svg class="main-nav__logo-image logo__image" width="70" height="38">
             <use href="img/sprite_auto.svg#logo"></use>
@@ -49,7 +49,7 @@
         <div class="promo__description">
           <h2>Путешествие <span class="promo__nowrap">на край Земли</span></h2>
           <p>
-            Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.
+            Это волшебное путешествие поможет вам познакомиться поближе с&#160;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&#160;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.
           </p>
         </div>
         <figure class="promo__image">
@@ -58,27 +58,31 @@
             <!-- 1x: 560px; 2x: 1120px -->
             <img src="img/content/promo.jpg" srcset="img/content/promo@2x.jpg 2x" width="560" height="301" alt="Пингвины Антарктики.">
           </picture>
+          <!-- <picture>
+            <source type="image/webp" srcset="img/content/promo-test.webp 1x, img/content/promo-test@2x.webp 2x">
+            <img src="img/content/promo-test.jpg" srcset="img/content/promo-test@2x.jpg 2x" width="560" height="301" alt="Пингвины Антарктики.">
+          </picture> -->
         </figure>
       </section>
       <section id="benefits" class="benefits">
         <h2>Преимущества</h2>
         <ul class="benefits__list">
           <li class="benefits__item benefits__item--liner">
-            <h3>Небольшой круизный лайнер</h3>
+            <h3>Небольшой круизный&#160;лайнер</h3>
             <p>
-              Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.
+              Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и&#160;очередей и&#160;даст возможность насладиться видами и&#160;природой.
             </p>
           </li>
           <li class="benefits__item benefits__item--all-inclusive">
-            <h3>Система все включено</h3>
+            <h3>Система все&#160;включено</h3>
             <p>
-              Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.
+              Все наши круизы работают по&#160;системе “Все Включено”. Великолепные блюда и&#160;безлимитный бар доступны для вас 24&#160;часа.
             </p>
           </li>
           <li class="benefits__item benefits__item--zodiac">
             <h3>Экскурсионные туры на Zodiac</h3>
             <p>
-              Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.
+              Экскурсионные туры к&#160;берегам Антарктиды совершаются <span class="benefits__nowrap benefits__nowrap--equipment">на оборудованных</span> лодках <span class="benefits__nowrap--type">типа Zodiac</span> в&#160;сопровождении опытных экскурсоводов.
             </p>
           </li>
         </ul>
@@ -254,6 +258,53 @@
               <a class="btn" href="#">Забронировать</a>
             </div>
           </article>
+        </div>
+      </section>
+      <section class="booking">
+        <div class="booking__inner">
+          <h2>Раннее бронирование</h2>
+          <p>Забронируйте тур <span class="booking__nowrap">за 3-6 месяцев</span> до&#160;даты выезда и сэкономьте до 50%</p>
+        </div>
+        <form class="booking__form form" action="#" method="post">
+          <p>Оставьте заявку <span class="booking__nowrap">и мы свяжемся с вами</span> в ближайшее время</p>
+          <label>
+            <span class="visually-hidden">Имя</span>
+            <input type="text" name="name" placeholder="Имя" required>
+          </label>
+          <label>
+            <span class="visually-hidden">Телефон</span>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+          </label>
+          <label>
+            <span class="visually-hidden">Почта</span>
+            <input type="email" name="phone" placeholder="Email" required>
+          </label>
+          <label class="form__agreement">
+            <input type="checkbox" name="agreement" checked>
+            <span class="form__agreement-icon"></span>
+            <span>Я согласен на обработку моих персональных данных</span>
+          </label>
+          <button class="btn" type="submit">Оставить заявку</button>
+        </form>
+      </section>
+      <section id="contacts" class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625305669!2d30.32085335162117!3d59.93871916896526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1657553859061!5m2!1sru!2sru"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Офис компании по адресу г. Санкт Петербург, ул. Большая Конюшенная, 19/8">
+        </iframe>
+        <div class="contacts__inner">
+          <p>
+            У вас ещё остались вопросы или сомнения? Приезжайте к&#160;нам в&#160;офис и мы вам все расскажем.
+          </p>
+          <span class="contacts__address">г. Санкт Петербург, <span class="contacts__nowrap">ул. Большая Конюшенная, 19/8</span></span>
+          <span class="contacts__phone">8-800-200-00-00</span>
         </div>
       </section>
     </main>
