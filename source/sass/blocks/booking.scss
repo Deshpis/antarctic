@@ -1,0 +1,104 @@
+.booking {
+  padding: 50px 163px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-base-black;
+  background-color: $color-booking-bg;
+  background-image: url("../img/decorative/booking-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/decorative/booking-bg@2x.jpg");
+  }
+
+  @include vp-1365 {
+    padding: 98px 100px;
+    padding-top: 88px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding: 65px 15px;
+    padding-top: 58px;
+  }
+}
+
+.booking__inner {
+  margin-right: 100px;
+  padding-top: 163px;
+  width: 500px;
+
+  @include vp-1365 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.booking__inner h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+
+  @include vp-1365 {
+    margin-bottom: 5px;
+    font-size: 34px;
+    line-height: 51px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+    margin-bottom: 14px;
+    width: 195px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking__inner p {
+  margin: 0;
+  width: 350px;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1365 {
+    margin: 0 auto;
+    margin-bottom: 52px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+    width: 260px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.booking__form {
+  padding: 50px 50px;
+  padding-top: 44px;
+  width: 403px;
+  color: $color-base-white;
+  background-color: $color-base-black;
+
+  @include vp-767 {
+    width: 290px;
+    padding: 40px 30px;
+    padding-top: 31px;
+  }
+}
+
+.booking__nowrap {
+  @include vp-767 {
+    white-space: nowrap;
+  }
+}
