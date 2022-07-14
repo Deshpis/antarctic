@@ -1,20 +1,65 @@
 .booking {
-  padding: 50px 163px;
-  display: flex;
-  justify-content: space-between;
   color: $color-base-black;
   background-color: $color-booking-bg;
-  background-image: url("../img/decorative/booking-bg.jpg");
+  background-image: url("../img/decorative/booking-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../img/decorative/booking-bg@2x.jpg");
+  @supports (background-image: url("../img/decorative/booking-bg-desktop.webp")) {
+    background-image: url("../img/decorative/booking-bg-desktop.webp");
   }
 
-  @include vp-1365 {
-    padding: 98px 100px;
+  @include retina {
+    background-image: url("../img/decorative/booking-bg-desktop@2x.jpg");
+
+    @supports (background-image: url("../img/decorative/booking-bg-desktop@2x.webp")) {
+      background-image: url("../img/decorative/booking-bg-desktop@2x.webp");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/decorative/booking-bg-tablet.jpg");
+
+    @supports (background-image: url("../img/decorative/booking-bg-tablet.webp")) {
+      background-image: url("../img/decorative/booking-bg-tablet.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/decorative/booking-bg-tablet@2x.jpg");
+
+      @supports (background-image: url("../img/decorative/booking-bg-tablet@2x.webp")) {
+        background-image: url("../img/decorative/booking-bg-tablet@2x.webp");
+      }
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/decorative/booking-bg-mobile.jpg");
+
+    @supports (background-image: url("../img/decorative/booking-bg-mobile.webp")) {
+      background-image: url("../img/decorative/booking-bg-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/decorative/booking-bg-mobile@2x.jpg");
+
+      @supports (background-image: url("../img/decorative/booking-bg-mobile@2x.webp")) {
+        background-image: url("../img/decorative/booking-bg-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.booking__wrapper {
+  margin: 0 auto;
+  padding: 50px 163px;
+  display: flex;
+  max-width: $vp-1366;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    padding: 100px;
     padding-top: 88px;
     flex-direction: column;
     align-items: center;
@@ -27,11 +72,11 @@
 }
 
 .booking__inner {
-  margin-right: 100px;
+  margin-right: 50px;
   padding-top: 163px;
   width: 500px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -49,7 +94,7 @@
   font-size: 40px;
   line-height: 60px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
@@ -70,7 +115,7 @@
   font-size: 18px;
   line-height: 27px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin: 0 auto;
     margin-bottom: 52px;
   }

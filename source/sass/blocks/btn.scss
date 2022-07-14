@@ -2,14 +2,12 @@
   display: inline-flex;
   margin: 10px 0;
   padding: 10px 20px;
-
   color: $color-base-black;
-
   background-color: $color-base-white;
   border: none;
   cursor: pointer;
-
   transition: opacity $trans-default;
+  user-select: none;
 
   &:disabled {
     opacity: 0.5;

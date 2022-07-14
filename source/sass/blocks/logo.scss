@@ -1,9 +1,19 @@
+.logo[href] {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
+
 .logo__image {
   width: 70px;
   height: 38px;
   fill: $color-base-white;
+  transition: opacity $trans-default;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 38px;
     height: 20px;
   }

@@ -1,7 +1,26 @@
-.main-nav__site-list {
-  max-width: 900px;
+.main-nav {
+  position: relative;
+}
 
-  @include vp-1365 {
+.main-nav__logo {
+  position: absolute;
+  left: 103px;
+  margin-right: 40px;
+
+  @include vp-1023 {
+    margin-right: 25px;
+    left: 45px;
+  }
+
+  @include vp-767 {
+    left: 15px;
+  }
+}
+
+.main-nav__site-list {
+  max-width: 80%;
+
+  @include vp-1023 {
     max-width: 550px;
   }
 }
@@ -19,6 +38,22 @@
     &--nojs {
       padding: 0;
     }
+  }
+
+  .main-nav__overlay,
+  .main-nav--nojs .main-nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: $color-overlay;
+    z-index: 2;
+  }
+
+  .main-nav--opened .main-nav__overlay {
+    display: block;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -41,19 +76,23 @@
     height: 62px;
     border: none;
     background-color: $color-transparent;
+    z-index: 4;
   }
 
   .main-nav__site-list {
     position: absolute;
     padding: 75px 30px 75px 15px;
     display: flex;
-    width: 285px;
-    min-height: 100vh;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
     top: 0;
     right: -100%;
     flex-direction: column;
+    flex-wrap: nowrap;
     background-color: $color-base-white;
     transition: all 100ms;
+    overflow-y: auto;
   }
 
   .main-nav--closed .main-nav__toggle::before {
@@ -91,16 +130,40 @@
   .main-nav--opened .main-nav__logo {
     position: absolute;
     top: 10px;
-    right: 218px;
-    z-index: 2;
+    left: 40px;
+    z-index: 4;
   }
 
   .main-nav--opened .main-nav__logo-image {
     fill: $color-base-black;
+    pointer-events: none;
   }
 
   .main-nav--opened .main-nav__site-list {
+    left: 35px;
     right: 0;
+    z-index: 3;
+
+    &::before,
+    &::after {
+      position: fixed;
+      content: "";
+      width: 100%;
+
+      left: 35px;
+    }
+
+    &::before {
+      height: 75px;
+      top: 0;
+      background: linear-gradient(0deg, $color-transparent 0%, $color-base-white 28%, $color-base-white 100%);
+    }
+
+    &::after {
+      height: 75px;
+      bottom: 0;
+      background: linear-gradient(180deg, $color-transparent 0%, $color-base-white 28%, $color-base-white 100%);
+    }
   }
 
   .main-nav--opened li {
@@ -113,6 +176,7 @@
   }
 
   .main-nav--opened a {
+    margin: 0;
     padding: 10px;
     padding-bottom: 8px;
     color: $color-base-black;

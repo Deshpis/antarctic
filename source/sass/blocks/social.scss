@@ -7,7 +7,7 @@
   gap: 27px;
   list-style: none;
 
-  @include vp-1365 {
+  @include vp-1023 {
     max-width: 95px;
     gap: 17px;
   }
@@ -20,6 +20,14 @@
   width: 20px;
   height: 20px;
   color: $color-base-white;
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
 }
 
 .social svg {
@@ -27,7 +35,7 @@
   height: 20px;
   fill: $color-base-white;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 16px;
     height: 16px;
   }

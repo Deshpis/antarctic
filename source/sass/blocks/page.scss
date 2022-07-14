@@ -11,25 +11,27 @@
 
 .page__body {
   margin: 0 auto;
-  width: $vp-1366;
+  width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   background-color: $color-base-white;
 
-  @include vp-1365 {
-    width: 100%;
-  }
-
   @include vp-767 {
     min-width: $vp-320;
+  }
+
+  &--disable-scroll {
+    overflow: hidden;
+    height: 100vh;
   }
 }
 
 .page__header {
   min-height: 650px;
 
-  @include vp-1365 {
+
+  @include vp-1023 {
     min-height: 638px;
   }
 

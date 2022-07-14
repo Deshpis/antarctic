@@ -1,17 +1,24 @@
 .footer {
+  background-color: $color-base-black;
+  color: $color-base-white;
+}
+
+.footer__wrapper {
+  margin: 0 auto;
   padding: 50px 103px;
   padding-bottom: 43px;
   display: flex;
+  max-width: $vp-1366;
   align-items: center;
-  background-color: $color-base-black;
-  color: $color-base-white;
 
-  @include vp-1365 {
-    padding: 50px 45px;
+  @include vp-1023 {
+    padding: 43px 45px;
+    padding-bottom: 35px;
   }
 
   @include vp-767 {
     padding: 40px 15px;
+    min-width: $vp-320;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -20,7 +27,7 @@
 .footer__logo {
   margin-right: 40px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 25px;
   }
 
@@ -31,6 +38,7 @@
 
 .footer__site-list {
   margin-right: auto;
+  padding-right: 40px;
 
   @include vp-767 {
     margin-bottom: 25px;
@@ -49,19 +57,29 @@
 }
 
 .footer__site-list a {
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 12px;
     line-height: 15px;
   }
 
   @include vp-767 {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 12px;
     line-height: 15px;
   }
 }
 
 .footer__social {
+  margin-top: 11px;
+  margin-bottom: 14px;
+
+  @include vp-1023 {
+    margin-top: 8px;
+  }
+
   @include vp-767 {
+    margin: 0;
     position: relative;
     left: -5px;
   }

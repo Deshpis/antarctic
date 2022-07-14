@@ -13,22 +13,31 @@
     margin-right: 0;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 24px;
   }
 }
 
 .site-list a {
-  padding-top: 5px;
-  padding-bottom: 13px;
+  margin-top: 10px;
+  margin-bottom: 13px;
   display: block;
   font-weight: 500;
   line-height: 20px;
   color: $color-base-white;
   text-decoration: none;
+  transition: opacity $trans-default;
 
-  @include vp-1365 {
-    padding: 0;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  @include vp-1023 {
+    margin-top: 2px;
+    margin-bottom: 15px;
     font-size: 14px;
     line-height: 17px;
   }

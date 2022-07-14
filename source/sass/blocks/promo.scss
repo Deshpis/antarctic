@@ -1,8 +1,10 @@
 .promo {
+  margin: 0 auto;
   padding: 120px 103px;
   display: flex;
+  max-width: $vp-1366;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 93px 45px;
     padding-top: 91px;
     justify-content: center;
@@ -20,7 +22,7 @@
   padding-top: 56px;
   width: 515px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-right: 29px;
     padding-top: 0;
     min-width: 325px;
@@ -41,7 +43,7 @@
   font-size: 28px;
   line-height: 42px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 16px;
     font-size: 26px;
     line-height: 36px;
@@ -55,7 +57,7 @@
 }
 
 .promo__nowrap {
-  @include vp-1365 {
+  @include vp-1023 {
     white-space: nowrap;
   }
 }
@@ -72,7 +74,7 @@
   height: 301px;
   overflow: hidden;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-top: 9px;
     min-width: 324px;
     height: 273px;

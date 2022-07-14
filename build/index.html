@@ -15,33 +15,36 @@
   </head>
   <body class="page__body">
     <header class="page__header header">
-      <nav class="header__navigation main-nav main-nav--opened main-nav--nojs">
-        <a class="main-nav__logo logo" href="#" title="Логотип">
-          <svg class="main-nav__logo-image logo__image" width="70" height="38">
-            <use href="img/sprite_auto.svg#logo"></use>
-          </svg>
-        </a>
-        <ul class="main-nav__site-list site-list">
-          <li>
-            <a href="#benefits">Преимущества</a>
-          </li>
-          <li>
-            <a href="#">Направления</a>
-          </li>
-          <li>
-            <a href="#upcoming">Ближайшие круизы</a>
-          </li>
-          <li>
-            <a href="#contacts">Контакты</a>
-          </li>
-        </ul>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </nav>
-      <div class="header__main-header main-header">
-        <h1>Круизы <span class="main-header__nowrap">в Антарктику</span></h1>
-        <p>Волшебный мир <span class="main-header__nowrap">айсбергов и пингвинов</span></p>
+      <div class="header__wrapper">
+        <nav class="header__navigation main-nav main-nav--opened main-nav--nojs">
+          <div class="main-nav__overlay"></div>
+          <a class="main-nav__logo logo" title="Логотип">
+            <svg class="main-nav__logo-image logo__image" width="70" height="38">
+              <use href="img/sprite_auto.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="main-nav__site-list site-list">
+            <li>
+              <a href="#benefits">Преимущества</a>
+            </li>
+            <li>
+              <a href="#">Направления</a>
+            </li>
+            <li>
+              <a href="#upcoming">Ближайшие круизы</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Меню</span>
+          </button>
+        </nav>
+        <div class="header__main-header main-header">
+          <h1>Круизы <span class="main-header__nowrap">в Антарктику</span></h1>
+          <p>Волшебный мир <span class="main-header__nowrap">айсбергов и пингвинов</span></p>
+        </div>
       </div>
     </header>
     <main class="page__main">
@@ -61,27 +64,29 @@
         </figure>
       </section>
       <section id="benefits" class="benefits">
-        <h2>Преимущества</h2>
-        <ul class="benefits__list">
-          <li class="benefits__item benefits__item--liner">
-            <h3>Небольшой круизный&#160;лайнер</h3>
-            <p>
-              Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и&#160;очередей и&#160;даст возможность насладиться видами и&#160;природой.
-            </p>
-          </li>
-          <li class="benefits__item benefits__item--all-inclusive">
-            <h3>Система все&#160;включено</h3>
-            <p>
-              Все наши круизы работают по&#160;системе “Все Включено”. Великолепные блюда и&#160;безлимитный бар доступны для вас 24&#160;часа.
-            </p>
-          </li>
-          <li class="benefits__item benefits__item--zodiac">
-            <h3>Экскурсионные туры на Zodiac</h3>
-            <p>
-              Экскурсионные туры к&#160;берегам Антарктиды совершаются <span class="benefits__nowrap benefits__nowrap--equipment">на оборудованных</span> лодках <span class="benefits__nowrap benefits__nowrap--type">типа Zodiac</span> в&#160;сопровождении опытных экскурсоводов.
-            </p>
-          </li>
-        </ul>
+        <div class="benefits__wrapper">
+          <h2>Преимущества</h2>
+          <ul class="benefits__list">
+            <li class="benefits__item benefits__item--liner">
+              <h3>Небольшой круизный&#160;лайнер</h3>
+              <p>
+                Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и&#160;очередей и&#160;даст возможность насладиться видами и&#160;природой.
+              </p>
+            </li>
+            <li class="benefits__item benefits__item--all-inclusive">
+              <h3>Система все&#160;включено</h3>
+              <p>
+                Все наши круизы работают по&#160;системе “Все Включено”. Великолепные блюда и&#160;безлимитный бар доступны для вас 24&#160;часа.
+              </p>
+            </li>
+            <li class="benefits__item benefits__item--zodiac">
+              <h3>Экскурсионные туры на Zodiac</h3>
+              <p>
+                Экскурсионные туры к&#160;берегам Антарктиды совершаются <span class="benefits__nowrap benefits__nowrap--equipment">на оборудованных</span> лодках <span class="benefits__nowrap benefits__nowrap--type">типа Zodiac</span> в&#160;сопровождении опытных экскурсоводов.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="upcoming" class="catalog">
         <h2>Ближайшие круизы</h2>
@@ -257,31 +262,33 @@
         </div>
       </section>
       <section class="booking">
-        <div class="booking__inner">
-          <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур <span class="booking__nowrap">за 3-6 месяцев</span> до&#160;даты выезда и сэкономьте до 50%</p>
+        <div class="booking__wrapper">
+          <div class="booking__inner">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур <span class="booking__nowrap">за 3-6 месяцев</span> до&#160;даты выезда и сэкономьте до 50%</p>
+          </div>
+          <form class="booking__form form" action="#" method="post">
+            <p>Оставьте заявку <span class="booking__nowrap">и&#160;мы свяжемся с&#160;вами</span> в ближайшее время</p>
+            <label>
+              <span class="visually-hidden">Имя</span>
+              <input type="text" name="name" placeholder="Имя" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Телефон</span>
+              <input type="tel" name="phone" placeholder="Телефон" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Почта</span>
+              <input type="email" name="phone" placeholder="Email" required>
+            </label>
+            <label class="form__agreement">
+              <input type="checkbox" name="agreement" checked required>
+              <span class="form__agreement-icon"></span>
+              <span>Я согласен на обработку моих персональных данных</span>
+            </label>
+            <button class="btn" type="submit">Оставить заявку</button>
+          </form>
         </div>
-        <form class="booking__form form" action="#" method="post">
-          <p>Оставьте заявку <span class="booking__nowrap">и мы свяжемся с вами</span> в ближайшее время</p>
-          <label>
-            <span class="visually-hidden">Имя</span>
-            <input type="text" name="name" placeholder="Имя" required>
-          </label>
-          <label>
-            <span class="visually-hidden">Телефон</span>
-            <input type="tel" name="phone" placeholder="Телефон" required>
-          </label>
-          <label>
-            <span class="visually-hidden">Почта</span>
-            <input type="email" name="phone" placeholder="Email" required>
-          </label>
-          <label class="form__agreement">
-            <input type="checkbox" name="agreement" checked>
-            <span class="form__agreement-icon"></span>
-            <span>Я согласен на обработку моих персональных данных</span>
-          </label>
-          <button class="btn" type="submit">Оставить заявку</button>
-        </form>
       </section>
       <section id="contacts" class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
@@ -300,56 +307,58 @@
             У вас ещё остались вопросы или сомнения? Приезжайте к&#160;нам в&#160;офис и мы вам все расскажем.
           </p>
           <span class="contacts__address">г. Санкт Петербург, <span class="contacts__nowrap">ул. Большая Конюшенная, 19/8</span></span>
-          <span class="contacts__phone">8-800-200-00-00</span>
+          <span class="contacts__phone"><a href="tel:88002000000">8-800-200-00-00</a></span>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <a class="footer__logo logo" href="#" title="Логотип">
-        <svg class="logo__image" width="70" height="38">
-          <use href="img/sprite_auto.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="footer__site-list site-list">
-        <li>
-          <a href="#benefits">Преимущества</a>
-        </li>
-        <li>
-          <a href="#directions">Направления</a>
-        </li>
-        <li>
-          <a href="#upcoming">Ближайшие круизы</a>
-        </li>
-        <li>
-          <a href="#contacts">Контакты</a>
-        </li>
-      </ul>
-      <ul class="footer__social social">
-        <li>
-          <a href="#" rel="noopener noreferrer" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg width="11" height="20">
-              <use href="img/sprite_auto.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" rel="noopener noreferrer" target="_blank">
-            <span class="visually-hidden">Инстаграм</span>
-            <svg width="20" height="20">
-              <use href="img/sprite_auto.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" rel="noopener noreferrer" target="_blank">
-            <span class="visually-hidden">Твиттер</span>
-            <svg width="20" height="17">
-              <use href="img/sprite_auto.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="footer__wrapper">
+        <a class="footer__logo logo" href="#" title="Логотип">
+          <svg class="logo__image" width="70" height="38">
+            <use href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__site-list site-list">
+          <li>
+            <a href="#benefits">Преимущества</a>
+          </li>
+          <li>
+            <a href="#directions">Направления</a>
+          </li>
+          <li>
+            <a href="#upcoming">Ближайшие круизы</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__social social">
+          <li>
+            <a href="#" rel="noopener noreferrer" target="_blank">
+              <span class="visually-hidden">Фейсбук</span>
+              <svg width="11" height="20">
+                <use href="img/sprite_auto.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" rel="noopener noreferrer" target="_blank">
+              <span class="visually-hidden">Инстаграм</span>
+              <svg width="20" height="20">
+                <use href="img/sprite_auto.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" rel="noopener noreferrer" target="_blank">
+              <span class="visually-hidden">Твиттер</span>
+              <svg width="20" height="17">
+                <use href="img/sprite_auto.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

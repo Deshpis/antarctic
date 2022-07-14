@@ -1,8 +1,10 @@
 .catalog {
+  margin: 0 auto;
   padding: 120px 118px;
   padding-top: 110px;
+  max-width: $vp-1366;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 100px 60px;
     padding-top: 90px;
   }
@@ -21,7 +23,7 @@
   font-size: 28px;
   line-height: 42px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 26px;
     line-height: 39px;
   }
@@ -35,15 +37,16 @@
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(auto-fill, 260px);
+  justify-content: center;
   gap: 30px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 309px);
+    grid-template-columns: repeat(2, 309px);
   }
 
   @include vp-767 {
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-columns: 270px;
   }
 }

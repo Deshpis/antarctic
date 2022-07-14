@@ -1,6 +1,4 @@
 .benefits {
-  padding: 120px 103px;
-  padding-top: 111px;
   color: $color-base-black;
   background-color: $color-benefits-bg;
   background-image: url("../img/decorative/benefits-bg-desktop.jpg");
@@ -8,28 +6,65 @@
   background-position: center;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../img/decorative/benefits-bg-desktop@2x.jpg");
+  @supports (background-image: url("../img/decorative/benefits-bg-desktop.webp")) {
+    background-image: url("../img/decorative/benefits-bg-desktop.webp");
   }
 
-  @include vp-1365 {
-    padding: 100px 45px;
-    padding-top: 90px;
+  @include retina {
+    background-image: url("../img/decorative/benefits-bg-desktop@2x.jpg");
+
+    @supports (background-image: url("../img/decorative/benefits-bg-desktop@2x.webp")) {
+      background-image: url("../img/decorative/benefits-bg-desktop@2x.webp");
+    }
+  }
+
+  @include vp-1023 {
     background-image: url("../img/decorative/benefits-bg-tablet.jpg");
+
+    @supports (background-image: url("../img/decorative/benefits-bg-tablet.webp")) {
+      background-image: url("../img/decorative/benefits-bg-tablet.webp");
+    }
 
     @include retina {
       background-image: url("../img/decorative/benefits-bg-tablet@2x.jpg");
+
+      @supports (background-image: url("../img/decorative/benefits-bg-tablet@2x.webp")) {
+        background-image: url("../img/decorative/benefits-bg-tablet@2x.webp");
+      }
     }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/decorative/benefits-bg-mobile.jpg");
+
+    @supports (background-image: url("../img/decorative/benefits-bg-mobile.webp")) {
+      background-image: url("../img/decorative/benefits-bg-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/decorative/benefits-bg-mobile@2x.jpg");
+
+      @supports (background-image: url("../img/decorative/benefits-bg-mobile@2x.webp")) {
+        background-image: url("../img/decorative/benefits-bg-mobile@2x.webp");
+      }
+    }
+  }
+}
+
+.benefits__wrapper {
+  margin: 0 auto;
+  padding: 120px 103px;
+  padding-top: 111px;
+  max-width: $vp-1366;
+
+  @include vp-1023 {
+    padding: 100px 45px;
+    padding-top: 90px;
   }
 
   @include vp-767 {
     padding: 65px 15px;
     padding-top: 57px;
-    background-image: url("../img/decorative/benefits-bg-mobile.jpg");
-
-    @include retina {
-      background-image: url("../img/decorative/benefits-bg-mobile@2x.jpg");
-    }
   }
 }
 
@@ -41,7 +76,7 @@
   font-size: 28px;
   line-height: 42px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 49px;
     font-size: 26px;
     line-height: 39px;
@@ -58,18 +93,18 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(3, minmax(100px, 360px));
   gap: 40px;
   list-style: none;
 
-  @include vp-1365 {
+  @include vp-1023 {
     grid-template-columns: repeat(3, 206px);
     justify-content: center;
     gap: 30px;
   }
 
   @include vp-767 {
-    grid-template-columns: repeat(auto-fill, 290px);
+    grid-template-columns: 290px;
   }
 }
 
@@ -79,42 +114,42 @@
   padding-top: 80px;
   background-color: $color-base-white;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding: 20px;
     padding-top: 70px;
   }
 }
 
 .benefits .benefits__item--liner {
-  @include vp-1365 {
+  @include vp-1023 {
     padding-right: 16px;
   }
 }
 
 .benefits__item--all-inclusive p {
-  width: 280px;
+  max-width: 280px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 100%;
   }
 }
 
 .benefits .benefits__item--all-inclusive {
-  @include vp-1365 {
+  @include vp-1023 {
     padding-right: 24px;
   }
 }
 
 .benefits .benefits__item--zodiac {
-  @include vp-1365 {
+  @include vp-1023 {
     padding-right: 19px;
   }
 }
 
 .benefits__item--zodiac p {
-  width: 240px;
+  max-width: 240px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 100%;
   }
 }
@@ -130,7 +165,7 @@
   background-position: 0 50%;
   background-size: contain;
 
-  @include vp-1365 {
+  @include vp-1023 {
     width: 38px;
     height: 26px;
     top: 25px;
@@ -157,7 +192,7 @@
   font-size: 18px;
   line-height: 27px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     margin-bottom: 6px;
   }
 
@@ -175,7 +210,7 @@
 .benefits__nowrap--equipment {
   white-space: nowrap;
 
-  @include vp-1365 {
+  @include vp-1023 {
     white-space: normal;
   }
 
