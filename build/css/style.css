@@ -1398,6 +1398,9 @@ button,
 
 .contacts__phone a {
   color: #011c40;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .contacts .contacts__nowrap {
@@ -1562,6 +1565,11 @@ button,
 
   .social a:hover,
   .social a:focus {
+    opacity: 0.8;
+  }
+
+  .contacts__phone a:hover,
+  .contacts__phone a:focus {
     opacity: 0.8;
   }
 
@@ -1966,30 +1974,8 @@ button,
     padding: 0;
   }
 
-  .main-nav__overlay,
-  .main-nav--nojs .main-nav__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 43, 102, 0.5);
-    z-index: 2;
-  }
-
   .main-nav--opened .main-nav__overlay {
     display: block;
-  }
-
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__site-list {
-    position: relative;
-    width: 100%;
-    min-height: auto;
   }
 
   .main-nav__toggle {
@@ -2106,6 +2092,11 @@ button,
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f9fbfd 28%, #f9fbfd 100%);
   }
 
+  .main-nav--nojs .main-nav__site-list::before,
+  .main-nav--nojs .main-nav__site-list::after {
+    display: none;
+  }
+
   .main-nav--opened li {
     margin: 0;
     margin-bottom: 10px;
@@ -2120,6 +2111,33 @@ button,
     padding: 10px;
     padding-bottom: 8px;
     color: #011c40;
+  }
+
+  .main-nav__overlay,
+  .main-nav--nojs .main-nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 43, 102, 0.5);
+    z-index: 2;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__site-list {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+
+  .main-nav--nojs .main-nav__logo {
+    left: 0;
   }
 
   .main-header h1 {
